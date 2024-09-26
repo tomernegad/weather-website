@@ -5,28 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אתר מזג אוויר</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            text-align: center;
-            padding: 50px;
+            background: linear-gradient(135deg, #007adf, #00ecbc);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            direction: rtl; /* לכיוון ימין עבור עברית */
+            margin: 0;
         }
-        input, button {
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
             padding: 10px;
-            margin: 10px;
+            width: calc(100% - 22px);
+            margin-bottom: 20px;
+            border: 2px solid #00aaff;
+            border-radius: 5px;
             font-size: 16px;
         }
+
+        button {
+            background-color: #00aaff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #007acc;
+        }
+
         #weather-info {
             margin-top: 20px;
             font-size: 20px;
         }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <h1>בדוק את מזג האוויר בעיר שלך</h1>
-    <input type="text" id="city-name" placeholder="holon">
-    <button onclick="getWeather()">בדוק מזג אוויר</button>
-    <div id="weather-info"></div>
+    <div class="container">
+        <h1>בדוק את מזג האוויר בעיר שלך</h1>
+        <input type="text" id="city-name" placeholder="הכנס שם עיר">
+        <button onclick="getWeather()">בדוק מזג אוויר</button>
+        <div id="weather-info"></div>
+    </div>
 
     <script src="app.js"></script>
 </body>
