@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אתר מזג אוויר</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #weather-info {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>בדוק את מזג האוויר בעיר שלך</h1>
+    <input type="text" id="city-name" placeholder="holon">
+    <button onclick="getWeather()">בדוק מזג אוויר</button>
+    <div id="weather-info"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
